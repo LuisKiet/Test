@@ -1,16 +1,9 @@
-<!-- Given five positive integers, find the minimum and maximum values that can be calculated by summing
-exactly four of the five integers. Then print the respective minimum and maximum values as a single line
-of two space-separated long integers.
-For example arr = [1, 3, 5, 7, 9], . Our minimum sum is 1 + 3 + 5 + 7 = 16 and our maximum sum is 3 + 5 + 7 + 9 = 24
-
-We would print
-16 24 -->
-
 <?php
-    $list_number = array(1, 3, 5, 7, 9);
+    $input = "1 2 3 4 5";
+    $list_number = explode(' ', $input);
 
     $sum = 0;
-    
+
     for($i = 0; $i < count($list_number); $i++){
         $sum += $list_number[$i];
     }
@@ -19,5 +12,52 @@ We would print
     $min_list = $sum - max($list_number);
 
     echo $min_list.' '. $max_list;
+    
+?>
+
+<?php
+echo("_____________________________\n");
+    $input = "1 2 3 4 5";
+    $list_number = explode(' ', $input);
+    echo 'Input: '.$input;
+
+    $sum = 0; 
+    $min = $list_number[1]; 
+    $max = 0;
+
+    for($i = 0; $i < count($list_number); $i++){
+        $sum += $list_number[$i];
+
+        if ($list_number[$i] > $max) {
+            $max = $list_number[$i];
+        }
+
+        if($list_number[$i] < $min){
+            $min = $list_number[$i];
+        }
+    }
+
+    echo("\nEven elements in array: ");
+    for($i = 0; $i < count($list_number); $i++){
+        if($list_number[$i] % 2 == 0){
+            echo("$list_number[$i] ");
+        }
+    }
+
+    echo("\nOdd elements in array: ");
+    for($i = 0; $i < count($list_number); $i++){
+        if($list_number[$i] % 2 != 0){
+            echo("$list_number[$i] ");
+        }
+    }
+    
+    echo("\nSum: $sum");
+    echo("\nMax in array: $max");
+    echo("\nMin in array: $min");
+
+    $max_list = $sum - $min;
+    $min_list = $sum - $max;
+
+    echo ("\nOutput:  $min_list $max_list");
     
 ?>
