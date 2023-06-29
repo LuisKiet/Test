@@ -12,9 +12,9 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-light bg-light">
+    <nav class="navbar ">
       <div class="container">
-        <img src="https://logos.textgiraffe.com/logos/logo-name/Joke-designstyle-friday-m.png" alt="" width="100" height="50">
+        <img src="./Screenshot 2023-06-29 175717.png" alt="" width="100" height="50">
         <div class="info">
           <div style="float: left; text-align: end; padding-top:0.5rem">
             <p style="padding-top: 0; margin-bottom: 0; color: grey; font-style: italic;">Handicrafted by</p>

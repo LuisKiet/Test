@@ -23,7 +23,7 @@ class JokeController extends Controller
     public function setCookie(Request $request)
     {
         $response = new \Illuminate\Http\Response(view('joke_tks'));
-        $response->withCookie(cookie('name', 'hahahah', 0.1));
+        $response->withCookie(cookie('name', 'hahahah', 1));
         
         return $response;
     }
